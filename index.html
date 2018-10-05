@@ -166,9 +166,8 @@ function setActiveChapter(chapterName) {
 function isElementOnScreen(id) {
     var element = document.getElementById(id);
     var bounds = element.getBoundingClientRect();
-    console.log(window.innerHeight);
-    console.log(bounds.bottom);
-    return bounds.top < window.innerHeight && bounds.bottom  + (window.innerHeight*0.2) > 0;
+    return bounds.top < window.innerHeight - (window.innerHeight*0.2) && bounds.bottom > 0;
+    console.log("id:" & id & " Bounds.top: " & bound.top & " window.innerHeight: " & window.innerHeight & " bounds.bottom: " & bounds.bottom); 
 }
 </script>
 </body>
